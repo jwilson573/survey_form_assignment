@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <form action='/create_user' method='POST'>
+        
+            <label>Your Name:</label>
+            <input type='text' name='name'/>
+            <label>Dojo Location:</label>
+            <select name='dojo'>
+                <option>Mountain View</option>
+                <option>Dallas</option>
+                <option>San Jose</option>
+                <option>Seattle</option>
+            </select>
+            <label>Favorite Language:</label>
+            <select name='lang'>
+                <option>JavaScript</option>
+                <option>Python</option>
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>Java</option>
+            </select>
+            <p>Comment (optional):</p>
+            <textarea name='comment'></textarea>
+            {% csrf_token %}
+            <input type='submit' value='submit'>
+        </form>
+        
+    </body>
+</html>
